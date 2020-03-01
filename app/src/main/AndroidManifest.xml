@@ -9,13 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".RecyclerView.RacyclerActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <activity android:name=".Toolbar.ActivityToolbar">
+
+        </activity>
+        <activity android:name=".FlujoActividades.ActividadD" />
+        <activity android:name=".FlujoActividades.ActividadC" />
+        <activity android:name=".FlujoActividades.ActividadB" />
+        <activity android:name=".FlujoActividades.MainActivity"></activity>
     </application>
 
 </manifest>
