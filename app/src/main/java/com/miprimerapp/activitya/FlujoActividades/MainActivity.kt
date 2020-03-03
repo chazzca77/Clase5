@@ -10,6 +10,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    //Ciclo de vida de un Activity
+
     var nombre = "Carlos"
     val NOMBRE = "nombre"
 
@@ -25,21 +27,20 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("MENSAJE","Hacia Actividad B")
             startActivity(intent)
             //finish()
-
-            esteesmifuncion()
         }
 
         Log.e("CVA","onCreate")
     }
 
-    private fun esteesmifuncion(){}
 
+    //Método para recuperar estado guardado
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         nombre = savedInstanceState.getString(NOMBRE)!!
         Toast.makeText(this,nombre,Toast.LENGTH_SHORT).show()
     }
 
+    //Método para guardar estado de nuestra actividad actual
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(NOMBRE,nombre)
